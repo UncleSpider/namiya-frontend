@@ -1,0 +1,63 @@
+<!-- <p>common-user works!</p> -->
+<div *ngIf="burning==false">
+    <!-- <div *ngFor= "let item of msgList">
+        At {{item.time}}.. from {{item.from}} to {{item.to}}: {{item.msg}}
+    </div> -->
+    <nz-list [nzDataSource]="msgShown" [nzRenderItem]="msgItem" [nzPagination]="pagination">
+        <ng-template #msgItem let-item>
+            <nz-list-item [nzContent]="item.msgId" style="">
+                <nz-list-item-meta [nzTitle]="item.from"></nz-list-item-meta>
+            </nz-list-item>
+        </ng-template>
+        <ng-template #pagination>
+            <nz-pagination [nzPageIndex]="1" [nzTotal]="msgList.length*2" (nzPageIndexChange)="loadData($event)"></nz-pagination>
+        </ng-template>
+    </nz-list>
+    <nz-divider></nz-divider>
+    <textarea nz-input [(ngModel)]="inputMessage" rows="6"></textarea>
+    <button nz-button style="width: 50%; margin: 20px 0;">保存</button>
+    <button nz-button nzType="primary" style="width: 50%; margin: 20px 0;">发送</button>
+</div>
+
+<div *ngIf="burning==true" class="burning">
+    <div *ngFor= "let item of msgList">At {{item.time}}.. from {{item.from}} to {{item.to}}: {{item.msg}}</div>
+</div>
+
+<nz-modal [(nzVisible)]="changeVisible" nzOkText="我想好了，确定想要更换店员" nzTitle="更换志愿者" (nzOnOk)="cancelChange()" (nzOnCancel)="cancelChange()">
+    <app-change></app-change>
+</nz-modal>
+
+<button nz-button nz-popover nzPopoverTrigger="click" [nzPopoverContent]="menuTemplate" nzPopoverPlacement="topRight" style="position: fixed; right: 100px; bottom: 100px;">
+    <i nz-icon nzType="menu"></i>
+</button>
+<ng-template #menuTemplate>
+    <ul nz-menu [nzMode]="'vertical'">
+        <li nz-menu-item (click)="showChange()">更换志愿者</li>
+        <li nz-menu-item (click)="showBurn()">烧毁信件</li>
+        <li nz-menu-item>帮助&反馈</li>
+    </ul>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <button nz-button><i nz-icon nzType="menu" nzTheme="outline" style="position: fixed; right: 50px; bottom: 100px;"></i></button>
+
+<ul nz-menu nzMode="inline">
+    <li nz-submenu nzIcon="menu">
+        <ul>
+            <li nz-menu-item (click)="showChange()">change</li>
+            <li nz-menu-item (click)="showBurn()">burn</li>
+            <li nz-menu-item>help</li>
+        </ul>
+    </li>
+</ul> -->

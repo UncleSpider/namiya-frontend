@@ -1,0 +1,9 @@
+<p>现在接待您的店员是{{volunteer}}。确定想要换一个店员为您服务吗？</p>
+
+
+
+<!-- <a (click)="changeShowChoice()">我想好了，确定想要更换店员</a> -->
+
+<a (click)="changeShowParagraph()">关于更换店员，你可能想要了解的那些事</a>
+<p *ngIf="showParagraph">关于更换店员的规则和注意事项神马神马的</p>
+
