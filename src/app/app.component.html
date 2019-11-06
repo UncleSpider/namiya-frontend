@@ -7,17 +7,29 @@
         <li nz-menu-item>慢慢想</li>
       </ul>
     </nz-header>
+<<<<<<< HEAD
+    <nz-content style="margin: 20px 100px; ">
+=======
     <nz-content style="margin: 10px 100px; ">
+>>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
         <button routerLink="" (click)="routing=false">首页</button>
         <button routerLink="/user" (click)="routing=true">普通用户界面</button>
         <button routerLink="/volunteer" (click)="routing=true">志愿者界面</button>
         <button routerLink="/admin" (click)="routing=true">管理员界面</button>
         <nz-divider></nz-divider>
+<<<<<<< HEAD
+        <div nz-row nzType="flex" nzJustify="space-around" *ngIf="routing==false">
+            <div nz-col [nzXs]="10" [nzSm]="4">
+                <app-login></app-login>
+            </div>
+            <div nz-col [nzXs]="13" [nzSm]="18" style="background: whitesmoke;">
+=======
         <div nz-row nzType="flex" nzJustify="space-between" *ngIf="routing==false">
             <div nz-col nzSpan="8">
                 <app-login></app-login>
             </div>
             <div nz-col nzSpan="14" style="background: whitesmoke;">
+>>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                 其他内容<br/>
                 这里放一些求助热线和心理健康网站的链接神马的吧<br/>
                 <nz-list [nzDataSource]="newsAndResources" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
