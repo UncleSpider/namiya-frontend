@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { User } from 'src/app/interface/user';
-=======
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
 
 @Component({
   selector: 'app-volunteer',
@@ -11,7 +8,6 @@ import { User } from 'src/app/interface/user';
 })
 export class VolunteerComponent implements OnInit {
 
-<<<<<<< HEAD
   clients: User[];
   activeClient: number;
 
@@ -34,11 +30,6 @@ export class VolunteerComponent implements OnInit {
   changeActiveClient(p): void {
 
     console.log(p);
-=======
-  constructor() { }
-
-  ngOnInit() {
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
   }
 
 }

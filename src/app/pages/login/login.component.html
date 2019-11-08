@@ -30,50 +30,28 @@
             </form>
         </nz-tab>
         <nz-tab nzTitle="注册">
-<<<<<<< HEAD
             <form nz-form [formGroup]="formReg" (ngSubmit)="submitFormReg()" nzLayout="horizontal">
                 <nz-form-item>
                     <nz-form-label nzRequired nzFor="email">pku邮箱</nz-form-label>
                     <nz-form-control nzErrorTip="请输入正确的邮箱地址！">
-=======
-            <form nz-form [formGroup]="formReg" (ngSubmit)="submitFormReg()">
-                <nz-form-item>
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">邮箱</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入正确的邮箱地址！">
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                     <input nz-input formControlName="email" id="email" />
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-<<<<<<< HEAD
                     <nz-form-label nzRequired nzFor="studentId">学号</nz-form-label>
                     <nz-form-control  nzErrorTip="请正确输入您的学号！">
-=======
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="studentId">学号</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请正确输入您的学号！">
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                     <input nz-input formControlName="studentId" id="studentId" />
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-<<<<<<< HEAD
                     <nz-form-label nzFor="password" nzRequired>密码</nz-form-label>
                     <nz-form-control nzErrorTip="请输入密码">
-=======
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>密码</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请输入密码">
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                         <input nz-input type="password" id="password" formControlName="password" (ngModelChange)="updateConfirmValidator()"/>
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-<<<<<<< HEAD
                     <nz-form-label nzFor="checkPassword" nzRequired>确认密码</nz-form-label>
                     <nz-form-control [nzErrorTip]="errorTpl">
-=======
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="checkPassword" nzRequired>确认密码</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" [nzErrorTip]="errorTpl">
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                         <input nz-input type="password" formControlName="checkPassword" id="checkPassword" />
                     <ng-template #errorTpl let-control>
                         <ng-container *ngIf="control.hasError('required')">
@@ -86,7 +64,6 @@
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item>
-<<<<<<< HEAD
                     <nz-form-label nzFor="nickname" nzRequired>昵称</nz-form-label>
                     <nz-form-control nzErrorTip="请设置昵称！">
                     <input nz-input id="nickname" formControlName="nickname" />
@@ -97,38 +74,14 @@
                 
                 <nz-form-item nz-row class="register-area">
                     <nz-form-control>
-=======
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nickname" nzRequired>昵称</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="请设置昵称！">
-                    <input nz-input id="nickname" formControlName="nickname" />
-                    </nz-form-control>
-                </nz-form-item>
-                <nz-form-item>
-                    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phoneNumber" nzRequired>移动电话</nz-form-label>
-                    <nz-form-control [nzSm]="14" [nzXs]="24" [nzValidateStatus]="formReg.controls['phoneNumber']" nzErrorTip="请输入您的移动电话，您的电话号码将用于忘记密码时找回密码。">
-                    <nz-input-group>
-                        <input formControlName="phoneNumber" id="'phoneNumber'" nz-input />
-                    </nz-input-group>
-                    </nz-form-control>
-                </nz-form-item>
-                
-                
-                <nz-form-item nz-row class="register-area">
-                    <nz-form-control [nzSpan]="14" [nzOffset]="6">
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                     <label nz-checkbox formControlName="agree">
                         <span>我已阅读并同意<a>解忧杂货店服务条例</a>与<a>知情同意书</a></span>
                     </label>
                     </nz-form-control>
                 </nz-form-item>
                 <nz-form-item nz-row class="register-area">
-<<<<<<< HEAD
                     <nz-form-control>
                     <button nz-button nzType="primary" style="width: 100%;">注册</button>
-=======
-                    <nz-form-control [nzSpan]="14" [nzOffset]="6">
-                    <button nz-button nzType="primary">注册</button>
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
                     </nz-form-control>
                 </nz-form-item>
                 </form>

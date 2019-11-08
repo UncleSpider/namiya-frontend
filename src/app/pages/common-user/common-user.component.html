@@ -6,11 +6,7 @@
     <nz-list [nzDataSource]="msgShown" [nzRenderItem]="msgItem" [nzPagination]="pagination">
         <ng-template #msgItem let-item>
             <nz-list-item [nzContent]="item.msgId" style="">
-<<<<<<< HEAD
                 <nz-list-item-meta [nzTitle]="item.from.name"></nz-list-item-meta>
-=======
-                <nz-list-item-meta [nzTitle]="item.from"></nz-list-item-meta>
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
             </nz-list-item>
         </ng-template>
         <ng-template #pagination>
@@ -24,11 +20,7 @@
 </div>
 
 <div *ngIf="burning==true" class="burning">
-<<<<<<< HEAD
     <div *ngFor= "let item of msgList">At {{item.time}}.. from {{item.from}} to {{item.to}}: {{item.content}}</div>
-=======
-    <div *ngFor= "let item of msgList">At {{item.time}}.. from {{item.from}} to {{item.to}}: {{item.msg}}</div>
->>>>>>> b8d79129f930c6cc0c3f119ae5eb23243a037f5d
 </div>
 
 <nz-modal [(nzVisible)]="changeVisible" nzOkText="我想好了，确定想要更换店员" nzTitle="更换志愿者" (nzOnOk)="cancelChange()" (nzOnCancel)="cancelChange()">
